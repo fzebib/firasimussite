@@ -1,0 +1,14 @@
+AuthType Basic
+AuthName "WordPress Protected Area"
+AuthUserFile /security/wpadmin
+Require valid-user
+<Files admin-ajax.php>
+  Order allow,deny
+  Allow from all
+  Satisfy any
+</Files>
+<Files "\.(css|gif|png|js)$">
+  Order allow,deny
+  Allow from all
+  Satisfy any
+</Files>
